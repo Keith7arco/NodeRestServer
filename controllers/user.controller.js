@@ -68,12 +68,9 @@ const usuarioPath = (req,res) => {
 const usuarioDelete = async (req,res) => {
     const {id}=req.params;
 
-    //Borrado fisico
-    //const usuario = await Usuario.findByIdAndDelete(id);
-
     const usuario=await Usuario.findByIdAndUpdate(id,{estado:false});
 
-    res.json(usuario)
+    res.json({usuario});
 }
 
 module.exports={
