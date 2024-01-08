@@ -36,7 +36,9 @@
                //console.log('ID_TOKEN: '+response.credential)
 
                const body= {id_token:response.credential};
-               fetch('http://localhost:8080/api/auth/google',{
+               const urldev='http://localhost:8080/api/auth/google'
+               const urlPro='https://web-service-render-m8e5.onrender.com/'
+               fetch(urlPro,{
                     method:'POST',
                     headers:{
                         'Content-Type':'application/json'
